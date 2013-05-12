@@ -5,7 +5,6 @@
 */
 #include <Servo.h>
 
-//#define trigPin 13
 #define echoPin 12
 #define servoPin 9
 
@@ -27,7 +26,6 @@ Servo cabeca;
 
 // Inicializa os componentes do carrinho
 void setup() {
-  pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
   pinMode(servoPin, OUTPUT);
   cabeca.attach(servoPin);
@@ -104,7 +102,7 @@ int direcaoBluetooth() {
   }
   
   if (acao == 'H') { //Iniciar
-    direcao = 1;
+    direcao = 0;
   } else if (acao == 'L') { //Desligar, parar o carro
     direcao = 1;
   } else if(acao == 'P') { //Parar

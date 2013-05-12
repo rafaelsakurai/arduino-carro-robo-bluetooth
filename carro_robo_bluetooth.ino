@@ -81,7 +81,6 @@ void paraDireita() {
 
 // Para o carrinho
 void parar() {
-  Serial.println("parar()");
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, LOW);
